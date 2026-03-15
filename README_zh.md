@@ -48,6 +48,21 @@ departments/engineering/frontend-dev/
 2. **CLAUDE.md 全局规则** — 定义公司规则和员工清单，启动时自动生效
 3. **脚本驱动** — `run-workflow.sh` 一条命令启动流水线
 
+## 团队花名册
+
+| 部门 | 员工 | 关键参考资源 / 脚本 |
+|------|------|-------------------|
+| **产品部** | product-manager | `prd-template.md`, `user-story-guide.md` |
+| | ux-designer | `design-principles.md` |
+| **工程部** | frontend-dev | `code-standards.md` |
+| | backend-dev | `api-conventions.md` |
+| | code-reviewer | `lint-check.sh` |
+| **市场部** | content-writer | `brand-voice.md` |
+| | seo-specialist | `seo-checklist.md` |
+| **运营部** | data-analyst | `report-generator.py` |
+| | project-manager | `sprint-template.md` |
+| **人事部** | hr-specialist | — |
+
 ## 快速开始
 
 1. 选择一份指南开始阅读

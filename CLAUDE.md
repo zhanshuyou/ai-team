@@ -4,30 +4,35 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a documentation project providing guides for building "AI virtual companies" using Claude Code Skills. It contains Chinese-language guides (in `docs/`) that teach users how to organize AI team members as Skills with `SKILL.md` files, set up task orchestration workflows, and integrate AI teams into existing codebases.
+This is a documentation + reference implementation project for building "AI virtual companies" using Claude Code Skills. It contains Chinese-language guides (in `docs/`) and a working virtual company structure (in `departments/` and `shared/`) with 10 English-language employee Skills across 5 departments.
 
 Licensed under Apache 2.0.
 
 ## Repository Structure
 
-```
-docs/
-├── virtual-company-guide.md    # How to set up a virtual company with departments and Skills
-├── integrate-ai-team-guide.md  # How to integrate an AI team into an existing project
-└── auto-workflow-guide.md      # How to orchestrate multi-step workflows (CTO Skill, CLAUDE.md rules, shell scripts)
-```
+- `docs/` — Chinese-language guides (numbered, self-contained)
+  - `1.virtual-company-guide[DONE].md` — Setting up a virtual company from scratch
+  - `2.auto-workflow-guide.md` — Multi-step workflow orchestration
+  - `3.integrate-ai-team-guide.md` — Adding an AI team to an existing project
+- `departments/` — Working virtual company with SKILL.md definitions (all in English)
+  - `product/` — product-manager, ux-designer
+  - `engineering/` — frontend-dev, backend-dev, code-reviewer
+  - `marketing/` — content-writer, seo-specialist
+  - `operations/` — data-analyst, project-manager
+  - `hr/` — hr-specialist
+- `shared/` — Company-wide resources referenced by all employees: `company-context.md`, `tone-guide.md`, `glossary.md`
 
-There is no source code, build system, or test suite — this repo is purely documentation.
+There is no build system or test suite — this repo is documentation and Skill definitions.
 
 ## Key Concepts
 
-- **Skill = Employee**: Each AI "employee" is defined by a `SKILL.md` file (YAML frontmatter for trigger conditions + Markdown body for work instructions) plus optional `references/`, `scripts/`, and `assets/` directories
+- **Skill = Employee**: Each AI "employee" is a `SKILL.md` file (YAML frontmatter for trigger conditions + Markdown body for work instructions) plus optional `references/`, `scripts/`, and `assets/` directories
 - **Three-layer context loading**: (1) name + description always loaded, (2) SKILL.md body loaded on trigger, (3) references loaded on demand
 - **Orchestration patterns**: CTO/PM Skill for task decomposition, CLAUDE.md for global rules, shell scripts (`claude -p`) for fully automated pipelines
-- **Project integration**: Add `.ai-team/` directory + `CLAUDE.md` + `.claude/settings.json` to any existing project
+- **Cross-referencing**: Skills reference each other by name in their "Collaboration" sections and reference `shared/` resources for company context
 
 ## Writing Guidelines
 
-- All documentation is written in Chinese (Simplified)
-- Guides use practical examples with concrete directory structures and code snippets
-- Each guide is self-contained and can be read independently
+- **Guides** (`docs/`): Written in Chinese (Simplified), each guide is self-contained with practical examples and concrete directory structures
+- **SKILL.md files and references** (`departments/`, `shared/`): Written in English
+- Both READMEs (EN + ZH) exist and should be kept in sync when adding content that appears in both

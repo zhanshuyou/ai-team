@@ -52,6 +52,21 @@ Three approaches, from conversational to fully automated, that can be combined:
 2. **CLAUDE.md Global Rules** — Define company rules and employee roster, auto-loaded on startup
 3. **Script-Driven** — `run-workflow.sh` to launch a full pipeline with one command
 
+## Team Roster
+
+| Department | Employee | Key References / Scripts |
+|-----------|----------|------------------------|
+| **Product** | product-manager | `prd-template.md`, `user-story-guide.md` |
+| | ux-designer | `design-principles.md` |
+| **Engineering** | frontend-dev | `code-standards.md` |
+| | backend-dev | `api-conventions.md` |
+| | code-reviewer | `lint-check.sh` |
+| **Marketing** | content-writer | `brand-voice.md` |
+| | seo-specialist | `seo-checklist.md` |
+| **Operations** | data-analyst | `report-generator.py` |
+| | project-manager | `sprint-template.md` |
+| **HR** | hr-specialist | — |
+
 ## Quick Start
 
 1. Pick a guide and start reading
